@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+    
+}
+.btnStyle
+{
+   -fx-background-color:  #D3D4D6;   
+}
+    
+.btnStyle:hover
+{
+    -fx-background-color: #E6E6E6;   
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+  
+}
+.ap{
+-fx-background-color: linear-gradient(to left bottom, #f7f7f7 0%, #d4d6de 60%);
+}

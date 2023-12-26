@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="743.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.CustomerUIOrderController">
+   <children>
+      <TableView fx:id="tvCustomerOrder" layoutX="14.0" layoutY="107.0" prefHeight="250.0" prefWidth="420.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+        <columns>
+            <TableColumn fx:id="tcOrderID" prefWidth="90.0" text="OrderID" />
+            <TableColumn fx:id="tcProductID" prefWidth="96.0" text="ProductID" />
+          <TableColumn fx:id="tcBrand" prefWidth="144.0" text="Brand" />
+            <TableColumn fx:id="tcModel" prefWidth="120.0" text="Model" />
+            <TableColumn fx:id="tcDate" prefWidth="153.0" text="Order Date" />
+            <TableColumn fx:id="tcWarrantyLeft" prefWidth="137.0" text="Warranty Left" />
+            <TableColumn fx:id="tcDue" prefWidth="161.0" text="Due" />
+        </columns>
+      </TableView>
+      <Label layoutX="247.0" layoutY="28.0" text="Customer ID:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfCustomerID" editable="false" layoutX="364.0" layoutY="32.0" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="73.0" prefHeight="24.0" prefWidth="133.0" text="Total Orders">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvCustomerService" layoutX="14.0" layoutY="451.0" prefHeight="250.0" prefWidth="702.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <columns>
+            <TableColumn fx:id="tcServiceProductID" prefWidth="127.0" text="ProductID" />
+            <TableColumn fx:id="tcServiceBrand" prefWidth="171.0" text="Brand" />
+            <TableColumn fx:id="tcServiceModel" prefWidth="186.0" text="Model" />
+            <TableColumn fx:id="tcServiceCharge" prefWidth="136.0" text="Service Charge" />
+            <TableColumn fx:id="tcServiceStatus" prefWidth="138.0" text="Service Status" />
+            <TableColumn fx:id="tcServiceReceive" prefWidth="143.0" text="Receive Date " />
+         </columns>
+      </TableView>
+      <TextField fx:id="tfSearch" layoutX="730.0" layoutY="32.0" onKeyReleased="#searchOnKeyRelease" prefHeight="27.0" prefWidth="179.0" />
+      <MenuButton fx:id="menuBtnSearch" layoutX="570.0" layoutY="34.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="145.0" text="Brand">
+         <items>
+            <MenuItem fx:id="mitemBrand" mnemonicParsing="false" onAction="#searchByBrand" text="Brand" />
+            <MenuItem fx:id="mItemModel" mnemonicParsing="false" onAction="#searchByModel" text="Model" />
+         </items></MenuButton>
+      <Label alignment="CENTER" layoutX="604.0" layoutY="14.0" prefHeight="17.0" prefWidth="88.0" text="Search By" />
+      <TextField fx:id="tfTotalOrder" editable="false" layoutX="164.0" layoutY="76.0" text="0" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="414.0" prefHeight="27.0" prefWidth="145.0" text="Total Servicings">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfTotalServices" editable="false" layoutX="164.0" layoutY="417.0" text="0" />
+   </children>
+</AnchorPane>

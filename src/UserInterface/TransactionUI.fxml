@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane id="ScrollPane" fx:id="btn_modify" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#btnModifyOnCliked" prefHeight="720.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserInterface.TransactionUIController">
+    <AnchorPane id="AnchorPane" prefHeight="982.0" prefWidth="1080.0">
+        <children>
+            <DatePicker fx:id="dpFrom" layoutX="294.0" layoutY="14.0" />
+            <Label layoutX="260.0" layoutY="18.0" text="From: " />
+            <DatePicker fx:id="dpTo" layoutX="517.0" layoutY="14.0" />
+            <Label layoutX="497.0" layoutY="18.0" text="To: " />
+            <Button layoutX="712.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnSearchOnClick" text="Search" />
+            <TableView fx:id="tvOrder" layoutX="10.0" layoutY="77.0" prefHeight="240.0" prefWidth="1060.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                <columns>
+                    <TableColumn fx:id="tcOrderID" prefWidth="115.0" text="Order ID" />
+                    <TableColumn fx:id="tcCustomerID" prefWidth="132.0" text="Customer ID" />
+                    <TableColumn fx:id="tcProductID" prefWidth="165.0" text="Product ID" />
+                    <TableColumn fx:id="tcQuantity" prefWidth="171.0" text="Quantity" />
+                    <TableColumn fx:id="tcTime" prefWidth="277.0" text="Time" />
+                    <TableColumn fx:id="tcCost" prefWidth="198.0" text="Cost" />
+                </columns>
+            </TableView>
+            <TableView fx:id="tvSupplies" layoutX="10.0" layoutY="360.0" prefHeight="240.0" prefWidth="1030.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                <columns>
+                    <TableColumn fx:id="col_SupplierID" prefWidth="206.0" text="SupplierID" />
+                    <TableColumn fx:id="col_ProductID" prefWidth="195.0" text="ProductID" />
+                    <TableColumn fx:id="col_date" prefWidth="195.0" text="Date" />
+                    <TableColumn fx:id="col_Quantity" prefWidth="204.0" text="Quantity" />
+                    <TableColumn fx:id="col_cost" prefWidth="258.0" text="Cost" />
+                </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="50.0" prefHeight="17.0" prefWidth="1060.0" text="Orders Placed">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="333.0" prefHeight="17.0" prefWidth="1060.0" text="Supplies Bought">
+                <font>
+                    <Font name="System Bold" size="18.0" />
+                </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="764.0" layoutY="898.0" prefHeight="17.0" prefWidth="140.0" text="Revenue From Orders:" />
+            <Label alignment="CENTER_RIGHT" layoutX="764.0" layoutY="932.0" prefHeight="17.0" prefWidth="140.0" text="Expanse From Supplies:" />
+            <Label fx:id="lblRevOrder" layoutX="913.0" layoutY="898.0" prefHeight="17.0" prefWidth="98.0" text="Label" />
+            <Label fx:id="lblExpSupp" layoutX="913.0" layoutY="932.0" prefHeight="17.0" prefWidth="98.0" text="Label" />
+         <Label alignment="CENTER" layoutX="14.0" layoutY="620.0" prefHeight="17.0" prefWidth="1060.0" text="Services Provided" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER_RIGHT" layoutX="764.0" layoutY="915.0" prefHeight="17.0" prefWidth="140.0" text="Revenue From Services:" />
+         <Label fx:id="lblRevServices" layoutX="913.0" layoutY="915.0" prefHeight="17.0" prefWidth="98.0" text="Label" />
+         <TableView fx:id="tvService" layoutX="19.0" layoutY="647.0" prefHeight="240.0" prefWidth="976.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <columns>
+               <TableColumn fx:id="tcServiceID" prefWidth="102.0" text="Service ID" />
+               <TableColumn fx:id="tcServicesProductID" prefWidth="125.0" text="Product ID" />
+               <TableColumn fx:id="tcCustomerID1" prefWidth="122.0" text="Customer ID" />
+               <TableColumn fx:id="tcDetails" prefWidth="256.0" text="Details" />
+               <TableColumn fx:id="tcServiceCharge" prefWidth="134.0" text="Service Charge" />
+               <TableColumn fx:id="tcServiceStatus" prefWidth="129.0" text="Service Status" />
+               <TableColumn fx:id="tcGivenDate" prefWidth="151.0" text="Add Date " />
+            </columns>
+         </TableView>
+         <Label alignment="CENTER_RIGHT" layoutX="764.0" layoutY="949.0" prefHeight="17.0" prefWidth="140.0" text="Total:" />
+         <Label fx:id="lblProfit" layoutX="913.0" layoutY="949.0" prefHeight="17.0" prefWidth="98.0" text="Label" />
+        </children>
+    </AnchorPane>
+
+</ScrollPane>
